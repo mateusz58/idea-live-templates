@@ -1,4 +1,4 @@
-= Matt Raible's IntelliJ IDEA Live Templates
+=Custom live templates
 
 These are the https://www.jetbrains.com/help/idea/using-live-templates.html[IntelliJ IDEA Live Templates] that I've used in many demos and screencasts over the years.
 
@@ -12,6 +12,37 @@ I used IntelliJ's https://www.jetbrains.com/help/idea/sharing-live-templates.htm
 https://www.jetbrains.com/idea/download/[Download IntelliJ IDEA] today! It's a spectacular IDEA for Java, Kotlin, TypeScript, JavaScript, S/CSS, and HTML.
 
 If you'd rather not import _all_ of my templates, you can clone this project and open it in IntelliJ (with the Asciidoctor plugin installed). You should be able to edit this file and add the shortcuts below as live templates (**Tools** > **Save as Live Template**). Make sure to set the file type to match the language.
+
+== Algorithms solve
+[source,java]
+----
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+#parse("File Header.java")
+import java.util.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class Solution {
+
+    public String $entity(String o) {
+    return "a";
+    }
+
+    public static void main(String args[]) {
+    }
+    
+    @ParameterizedTest
+    @CsvSource(value = {"a"})
+    void test(String s){
+    
+        assertEquals($entity(s),"a");
+    }
+}
+----
 
 == Spring Boot
 
